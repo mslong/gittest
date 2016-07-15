@@ -1,0 +1,10 @@
+<project name="test" default="build" basedir=".">
+    <target name="build" depends="clean" description="build test">
+        <javac includejavaruntime="true" includeantruntime="true" srcdir="${basedir}/src/" destdir="build" source="1.8" target="1.8"></javac>
+    </target>
+
+    <target name="clean">
+        <delete dir="${basedir}/build"/>
+        <mkdir dir="${basedir}/build" />
+    </target>
+</project>
